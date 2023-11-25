@@ -72,6 +72,7 @@ const yuJin3 = {
 };
 
 console.log(returnName.call(yuJin3));
+console.log(returnName.apply(yuJin3));
 
 /**
  * 1) call -> comma를 기반으로 아규먼트를 순서대로 넘겨준다.
@@ -87,5 +88,6 @@ console.log(multiply.apply(yuJin3, [3, 4, 5]));
 
 const boundFunction = multiply.bind(yuJin3);
 
+console.log(boundFunction);
 console.log(boundFunction(3, 4, 5));
 console.log(boundFunction(3, 4, 5));
