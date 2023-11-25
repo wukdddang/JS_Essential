@@ -1,5 +1,5 @@
 /**
- * 클래스 강의를 끝낸기념 문제
+ * 클래스 강의를 끝낸 기념 문제
  *
  * 1) Country 클래스는 나라 이름과 나라에 해당되는 아이돌 그룹정보를
  *    리스트로 들고있다. (name 프로퍼티, idolGroups 프로퍼티)
@@ -136,18 +136,20 @@ const btsGroup = new IdolGroup(
   btsMembers.map((btsMember) => new ManIdol(btsMember.name, btsMember.year))
 );
 
+console.log(iveGroup, btsGroup);
+
 const koreaIdolGroup = new Country("korea", [iveGroup, btsGroup]);
 
-console.log(
-  koreaIdolGroup.idolGroups.map((idolGroup) => {
-    if (idolGroup.groupName === "아이브") {
-      idolGroup.members.forEach((member) => {
-        console.log(member.dance());
-      });
-    } else if (idolGroup.groupName === "BTS") {
-      idolGroup.members.forEach((member) => {
-        console.log(member.sing());
-      });
-    }
-  })
-);
+console.log(koreaIdolGroup);
+
+koreaIdolGroup.idolGroups.map((idolGroup) => {
+  if (idolGroup.groupName === "아이브") {
+    idolGroup.members.forEach((member) => {
+      console.log(member.dance());
+    });
+  } else if (idolGroup.groupName === "BTS") {
+    idolGroup.members.forEach((member) => {
+      console.log(member.sing());
+    });
+  }
+});
